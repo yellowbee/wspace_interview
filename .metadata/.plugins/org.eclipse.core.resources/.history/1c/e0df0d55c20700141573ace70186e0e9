@@ -1,0 +1,7 @@
+package com.leetcode.miscellaneous;
+
+public class TextJustification {
+	public List<String> fullJustify(String[] words, int L) {
+        
+    }
+}

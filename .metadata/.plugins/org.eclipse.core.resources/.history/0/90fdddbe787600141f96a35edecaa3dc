@@ -1,0 +1,45 @@
+package com.topcoder.graph;
+
+import java.util.PriorityQueue;
+import java.util.Stack;
+
+import com.common.graph.Edge;
+import com.common.graph.Vertex;
+
+public class Dijkstra {
+	public static void main(String[] args) {
+		Vertex s = new Vertex("S", 0);
+		
+	}
+	
+	public static void computeShortestPathFrom(Vertex source) {
+		PriorityQueue<Vertex> heap = new PriorityQueue<Vertex>();
+		
+		heap.add(source);
+		while (!heap.isEmpty()) {
+			Vertex cur = heap.poll();
+			
+			for (Edge e : cur.adjacencies) {
+				// relaxation process
+				if (e.target.value > cur.value + e.weight) {
+					heap.remove(e.target);
+					e.target.value = cur.value + e.weight;
+					heap.add(e.target);
+				}
+			}
+		}
+	}
+	
+	public static void printPathTo(Vertex target) {
+		Vertex v = target;
+		Stack<Vertex> stack = new Stack<Vertex>();
+		while (v != null) {
+			stack.add(v);
+			v = v.prev;
+		}
+		for (int i=stack.size()-1; i>=0; i--) {
+			System.out.print(stack.get(i).name + ", ");
+		}
+		System.out.println();
+	}
+}

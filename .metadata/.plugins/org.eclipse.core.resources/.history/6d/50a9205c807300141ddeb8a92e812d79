@@ -1,0 +1,29 @@
+package com.topcoder.tree;
+
+import java.util.Stack;
+
+import com.leetcode.oj.common.TreeNode;
+
+/*
+ * DFS of a tree using stack without recursion.
+ */
+
+public class DfsWithStack {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void pre(TreeNode root) {
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		
+		stack.push(root);
+		
+		TreeNode cur = null;
+		while (!stack.isEmpty()) {
+			cur = stack.pop();
+			System.out.print(cur.val);
+			stack.push(cur.right);
+			stack.push(cur.left);
+		}
+	}
+}

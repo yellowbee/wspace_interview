@@ -1,0 +1,5 @@
+package com.common.sorting;
+
+public class QuickSort {
+
+}

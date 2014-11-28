@@ -1,0 +1,7 @@
+package com.leetcode.miscellaneous;
+
+public class Sqrt {
+	public int sqrt(int x) {
+        int start;
+    }
+}

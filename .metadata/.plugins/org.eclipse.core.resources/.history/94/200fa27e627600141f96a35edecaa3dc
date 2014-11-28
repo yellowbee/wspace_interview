@@ -1,0 +1,11 @@
+package com.topcoder.graph;
+
+import com.common.graph.Graph;
+import com.common.graph.Vertex;
+
+public class Dijkstra {
+	
+	public static void computeShortestPathTo(Graph graph, Vertex source) {
+		
+	}
+}

@@ -1,0 +1,30 @@
+package misc.recursion;
+
+public class Merge {
+	public void merge(int[] arr1, int num, int[] arr2) {
+		int ptr1 = num - 1; // pointing to the last element of the 1st arr
+		int ptr2 = arr2.length - 1;
+		int cur = arr1.length - 1; // pointing to the current position to insert
+		
+		while (ptr1 >=0 && ptr2 >=0) {
+			if (arr1[ptr1] > arr2[ptr2]) {
+				arr1[cur] = arr1[ptr1];
+				cur--;
+				ptr1--;
+			}
+			else {
+				arr1[cur] = arr2[ptr2];
+				cur--;
+				ptr2--;
+			}
+		}
+		
+		if (ptr1 < 0) {
+			while (ptr2 >= 0) {
+				arr1[cur] = arr2[ptr2];
+				cur--;
+				ptr2--;
+			}
+		}
+	}
+}

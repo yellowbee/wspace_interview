@@ -1,0 +1,28 @@
+package com.topcoder.graph;
+
+import java.util.PriorityQueue;
+
+import com.common.graph.Edge;
+import com.common.graph.Graph;
+import com.common.graph.Vertex;
+
+public class Dijkstra {
+	
+	public static void computeShortestPathTo(Graph graph, Vertex source) {
+		PriorityQueue<Vertex> heap = new PriorityQueue<Vertex>();
+		
+		heap.add(source);
+		while (!heap.isEmpty()) {
+			Vertex cur = heap.poll();
+			int value = cur.value; // min distance from source
+			
+			for (Edge e : cur.adjacencies) {
+				if (e.target.value > cur.value + e.weight) {
+					heap.remove(e.target);
+					e.target.value = cur.value + e.weight;
+					heap.add(e.target);
+				}
+			}
+		}
+	}
+}

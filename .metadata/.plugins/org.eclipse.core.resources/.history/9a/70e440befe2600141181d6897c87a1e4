@@ -1,0 +1,5 @@
+package com.leetcode.oj.dp;
+
+public class LongestPalindromicSubstring {
+
+}

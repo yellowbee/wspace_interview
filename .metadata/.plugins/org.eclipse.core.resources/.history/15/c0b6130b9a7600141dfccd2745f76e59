@@ -1,0 +1,9 @@
+package com.amazon.tree;
+
+/*
+ * Given two BSTs, check if they are the same.
+ */
+
+public class BstMatch {
+
+}

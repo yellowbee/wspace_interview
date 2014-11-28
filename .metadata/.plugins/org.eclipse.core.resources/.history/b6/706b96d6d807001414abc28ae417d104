@@ -1,0 +1,69 @@
+package com.leetcode.miscellaneous;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and right) justified.
+
+You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly L characters.
+
+Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.
+
+For the last line of text, it should be left justified and no extra space is inserted between words.
+
+For example,
+words: ["This", "is", "an", "example", "of", "text", "justification."]
+L: 16.
+
+Return the formatted lines as:
+[
+   "This    is    an",
+   "example  of text",
+   "justification.  "
+]
+Note: Each word is guaranteed not to exceed L in length.
+ */
+
+public class TextJustification {
+	public static void main(String[] args) {
+		String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+		TextJustification tj = new TextJustification();
+		List<String> result = tj.fullJustify(words, 16);
+		for (String str : result) {
+			System.out.println(str);
+		}
+	}
+	
+	public List<String> fullJustify(String[] words, int L) {
+		int head_of_line = 0;
+		int cur_lensum = 0;
+		List<String> result = new ArrayList<String>();
+		
+        for (int i=0; i<words.length; i++) {
+        	if (cur_lensum + words[i].length() + i - head_of_line <= L) {// max line length not met yet
+        		cur_lensum += words[i].length();
+        	}
+        	else {// max line length exceeded
+        		int common_space = (L-cur_lensum) / (i-head_of_line); // least num of spaces btw two words
+        		int uneven_space = (L-cur_lensum) % (i-head_of_line); // num of uneven spaces for the current line
+        		StringBuilder sb = new StringBuilder();
+        		for (int j=head_of_line; j<i; j++) {
+        			sb.append(words[j]);
+        			for (int k=0; k<common_space; k++) {
+        				sb.append(" ");
+        			}
+        			if (uneven_space >= 1) {
+        				sb.append(" ");
+        				uneven_space--;
+        			}
+        		}
+        		result.add(sb.toString());
+        		head_of_line = i;
+        		cur_lensum = words[head_of_line].length();
+        	}
+        }
+        
+        return result;
+    }
+}

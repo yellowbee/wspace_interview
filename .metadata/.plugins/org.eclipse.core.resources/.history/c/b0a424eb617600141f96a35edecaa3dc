@@ -1,0 +1,14 @@
+package com.common.graph;
+
+class Edge {
+	public Vertex target;
+	public int weight;
+	
+	public Edge(Vertex target, int weight) {
+		this.target = target;
+		this.weight = weight;
+	}
+}
+public class Graph {
+	public Vertex[] graph;
+}
