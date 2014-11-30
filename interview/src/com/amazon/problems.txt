@@ -1,0 +1,6 @@
+Intervew Problems
+
+1. Find top 100 maximum number from a continuous input stream.”
+
+2. Find the first non-repeating character in a string
+   Use a hash table; count the frequency of characters

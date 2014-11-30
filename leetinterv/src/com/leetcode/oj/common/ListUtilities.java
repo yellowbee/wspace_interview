@@ -1,6 +1,12 @@
 package com.leetcode.oj.common;
 
 public class ListUtilities {
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6};
+		ListNode head = arrayToList(arr);
+		printList(head);
+	}
+	
 	public static ListNode arrayToList(int[] arr) {
 		if (arr.length == 0) {
 			return null;
