@@ -39,5 +39,6 @@ public class TreeUtility {
 				System.out.print("#,");
 			}
 		}
+		System.out.println();
 	}
 }

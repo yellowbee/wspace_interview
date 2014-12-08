@@ -4,3 +4,158 @@ Intervew Problems
 
 2. Find the first non-repeating character in a string
    Use a hash table; count the frequency of characters
+
+3. “how would you design how a cellphone implements its contact list when you press a certain letter.
+   For example, If you press M it will tell you all the names starting with M. then if you press MI…”
+   Discussion: Using a BST might help.
+   
+4. Given an array of integers, all but one of which appears an   even number of times,
+   find the one integer which appears an odd number of times. Upon completion, asked to
+   improve the algorithm in terms of both time and space, eventually asked to do it
+   in O(n) time and constant space.
+   
+5. Given an array, return the nth largest
+
+6. I was asked two questions. Q 1. You are given two version   numbers of a software,
+   like Version 10.3.4 and Version 10.3.41. Write a program to find out which of the version
+   numbers are the latest. If version 1 is latest output -1, if version number 2 is latest
+   output +1 else output 0 if same version. Both the version numbers are taken as string.
+   He also asks to make the program of minimum time complexity as we can. At the end he also
+   asked the difference between an iterative program and one with recurrence and their advantages
+   and disadvantages. Q 2. Given two files with a list of application IDs (or some kind of data)
+   stored in them , write a program to compare the data in the two files and output all the common
+   data found in each. What data structure would you use and why ? Give a minimum time and space
+   complexity algorithm. Why did you choose the particular data Structure or algorithm ?
+   
+7. 3Sum problem
+
+8. “Given a customer order of N items, design and implement a class that will most efficiently by
+   space place the order in various size boxes”
+   
+9. “Given an array, put all repeated characters together.”
+
+10. “Write a function that allows to convert a string to the corresponding number
+    (i.e. implement the atoi() C function)”
+    
+11. “What is the fast sorting algorithm and why?
+    This is a tricky question. Need to know more about the data to answer the question.
+
+12. “I had a difficult question about a cuboid composed of smaller cubes. How many cubes are
+    there where exactly two faces of the cube are exposed?”
+    
+13. Which sorting algorithm would be good for sorting small-sized integer arrays and why?
+    What is the performance? What about for large-sized integer arrays?”
+    Discussion: get yourself familiar with counting sort, radix sort
+
+14. “Determine the first non-repeated character in a word. For example, in abbcaf it should
+    return c. Do this in O(n) time with O(1) space.”
+    
+15. How would you find a duplicate number in a very large unsorted array of ints.
+
+16. Can you think of an example of a scenario where you would want to use a tree with more
+    degrees of branching than a binary tree?”
+    Discussion: such as a parse tree of an English sentence.
+    
+17. “Find the longest subsequence in a given array of numbers in O(n)
+
+18. “Given two (huge) sets, what is an efficient way to find their intersection?”
+
+19. First phone screen: Print all the nodes of a tree in reverse level order (ie print all the
+    nodes at the leaves first, then print the nodes on the level above the leaves, and then
+    eventually work your…”
+    
+20. “given a dictionary of words sorted according to a certain order, write a function to out put
+    this order. e.g. input {abc, fkq, bct} output:{a, f, b, k, c, q, t}”
+    
+21. find a anagrams of given string from the paragraph.”
+
+22. How would you code up a custom rectangle detector?
+
+23. Calculate the square root of a number.
+
+24. “Justify the suduku”
+
+25. in an array of characters find the character that is repeated the most
+
+26. “"Given a log file spanning multiple days, and given a page transition A -> B -> C, find
+    all the unique users who made this page transition in the logs"”
+    
+27. Remove the nth from last element in a singularly linked list in linear time
+
+28. Give pseudocode over phone and code on a shared screen how to scramble an array
+    of integers in random order. Then optimize it for better performance
+    
+29. Find the angle between the hour hand and the minute hand on a clock given the hour, minute and second
+
+30. Given two large files of integers, only one byte difference. Find out this byte if memory is limited.
+    What if memory is unlimited?
+    Tell the complexity of your algorithm and analyze it.
+    
+31. Given a binary tree with only upwards (parent) node references, re-construct the tree adding in child
+    references. You are given a list of leaf nodes (sorted in left to right order). Tricks include…
+    
+32. Given two sets of trees and ignoring the content of the nodes, describe rules that would define
+    whether or not these two trees are equivalent.
+    
+33. Given 4 points, write a method to determine if the 4th point is in the triangle
+    made by the first 3 points
+    
+34. Explain how the garbage collector works
+
+35. Write a program for creating Huffman Coding for a set of characters given its frequency table
+
+36. What is the name of the Java garbage collection algorithm”
+
+37. Describe the thread states in Java”
+
+38. Given a trie and a prefix, find the word (in the trie) that starts with some subsequence
+    of the prefix and also has the longest such subsequence.
+    
+39. Given a list of points in 2D and a single reference point, find k nearest neighbors.
+    No code required (iirc).
+    
+40. Implement a simple load balancing algorithm in pseudo code (over the phone
+
+41. Find the most common "3 page path" on a website given a large data log.
+
+42. How would you code up a custom rectangle detector?
+
+43. Given references to roots of two binary trees, how do you short circuit determine whether the
+    sequences of the leaf elements of both the trees are same
+    
+44. What are different types of memory?
+
+45. “You are to write a spell checker. Discuss the API, Data Structures and Algorithms.”
+
+46. Write a program to print all combinations of ascending numbers that equal an input number
+
+47. Code to find median in BST
+
+48. “Given an array of strings made up of 1s and 0s, formulate an algorithm that determines
+    which strings are sub-strings of others in the input array
+    
+49. Reverse a binary string consisting of 0s and 1s
+
+50. Given an array of strings, find if there are strings that are substring of another string.
+    (Need to review radix tree, trie etc.)
+    
+51. OO design for a parking lot; design a vending machine
+
+52. How would you reduce the size of the cookies in browser?
+
+53. MEDIAN OF TWO SORTED ARRAYS
+
+54. How would you stop a cross-site request attack?
+
+55. How would you remove common elements from a two arrays
+
+56. whats the difference between aggregation and association in a UML class diagram?”
+
+57. all numbers appear twice in an array, except one special number that only apprears once.
+    how to find it efficiently using only constant extra space”
+    
+58. Design Dictionary using TRIE
+
+59. Design (in Object Oriented manner) a restaurant reservation   service.
+    No coding necessary beyond class names and method names and rough description of
+    how they work. Then design the SQL database for this system (table names, columns and foreign keys)

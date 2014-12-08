@@ -11,17 +11,37 @@ public class ReverseLinkedList {
 		ListNode head = ListUtilities.arrayToList(arr);
 		ListUtilities.printList(head);
 		
-		ListNode newHead = reverse(head);
+		ListNode newHead = reverseItr(head);
 		ListUtilities.printList(newHead);
 
 	}
 	
-	public static ListNode reverse(ListNode head) {
+	public static ListNode reverseRec(ListNode head) {
 		if (head == null || head.next == null) return head;
 		
-		ListNode reversed = reverse(head.next);
+		ListNode reversed = reverseRec(head.next);
 		head.next.next = head;
 		head.next = null;
 		return reversed;
+	}
+	
+	public static ListNode reverseItr(ListNode head) {
+		if (head == null || head.next == null) return head;
+		
+		// init the porinters
+		ListNode prev = null;
+		ListNode cur = head;
+		ListNode next = cur.next;
+		
+		while (cur != null) {
+			cur.next = prev;
+			
+			if (next == null) break;
+			prev = cur;
+			cur = next;
+			next = next.next;
+		}
+		
+		return cur;
 	}
 }
