@@ -1,4 +1,4 @@
-package com.carrercup.linkedlist;
+package com.careercup.linkedlist;
 
 import com.leetcode.oj.common.ListNode;
 
