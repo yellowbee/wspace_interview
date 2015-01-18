@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="return" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="RemoveDupsInAString" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="return"/>
-			<item value="largest"/>
-			<item value="shapeType"/>
-			<item value="ListUtilities"/>
-			<item value="put"/>
-			<item value="containsKey"/>
-			<item value="map"/>
-			<item value="visited"/>
+			<item value="MyClass"/>
+			<item value="COLLEN"/>
+			<item value="ROWLEN"/>
+			<item value="fast"/>
+			<item value="slow"/>
+			<item value="intervals.get(i)"/>
+			<item value="s."/>
+			<item value="s"/>
 		</list>
 		<list key="replacehistory">
-			<item value="smallest"/>
-			<item value="shape"/>
-			<item value="add"/>
-			<item value="contains"/>
-			<item value="set"/>
-			<item value="used"/>
-			<item value="map_found"/>
-			<item value="map_to_find"/>
+			<item value="RemoveDupsInAString"/>
+			<item value="LinkedListUtil"/>
+			<item value="CLEN"/>
+			<item value="RLEN"/>
+			<item value="second"/>
+			<item value="first"/>
+			<item value="predecessor"/>
+			<item value="predessor"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="289" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="432" key="DIALOG_HEIGHT"/>
-		<item value="1212" key="DIALOG_X_ORIGIN"/>
-		<item value="41" key="DIALOG_Y_ORIGIN"/>
+		<item value="923" key="DIALOG_X_ORIGIN"/>
+		<item value="374" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

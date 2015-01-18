@@ -6,6 +6,14 @@ import java.util.Stack;
 import com.common.graph.Edge;
 import com.common.graph.Vertex;
 
+/*
+ * In general, the time complexity for Dijkstra's algorithm
+ * is O(E*dk + V*em) where dk is the decrease key opration
+ * and em the extract minimum operation of the priority queue.
+ * 
+ * The actual time complexity depends on how the PQ is implemented.
+ */
+
 public class Dijkstra {
 	public static void main(String[] args) {
 		Vertex s = new Vertex("S", 0);

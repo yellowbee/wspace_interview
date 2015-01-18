@@ -2,34 +2,32 @@ package com.leetcode.oj.llist;
 
 import com.leetcode.oj.common.ListNode;
 
+/*
+ * Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+For example,
+Given 1->1->2, return 1->2.
+Given 1->1->2->3->3, return 1->2->3.
+ */
+
 public class RemoveDupFromSortedList {
 	public ListNode deleteDuplicates(ListNode head) {
-		if (head == null) {
-			return null;
-		}
+		if (head == null) return head;
 		
-		ListNode dummy = new ListNode(0);
-		dummy.next = head;
-		head = dummy;
+		ListNode prev = head;
+		ListNode cur = head.next;
 		
-		ListNode pre = dummy;
-		ListNode cur = dummy.next;
-		
-		while (cur != null && cur.next != null) {
-			if (cur.val == cur.next.val) {
-				int dup = cur.val;
-				while (cur != null && cur.val == dup) {
-					cur = cur.next;
-				}
-				pre.next.next = cur;
+		while (cur != null) {
+			if (prev.val == cur.val) {
+				prev.next = cur.next;
+				cur = prev.next;
 			}
 			else {
+				prev = cur;
 				cur = cur.next;
-				pre = pre.next;
 			}
 		}
 		
-		head = head.next;
 		return head;
     }
 }

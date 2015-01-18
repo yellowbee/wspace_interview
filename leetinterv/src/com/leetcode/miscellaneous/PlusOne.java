@@ -13,6 +13,10 @@ public class PlusOne {
 		Stack<Integer> stack = new Stack<Integer>();
 		int carry = 1;
 		int cur_sum = 0;
+		
+		// compute from the least significant position(the last element of the array)
+		// use a stack so that the when popping, we can easily get the number
+		// from most significant to least significant
         for (int i=digits.length-1; i>=0; i--) {
         	cur_sum = digits[i] + carry;
         	if (cur_sum > 9) {

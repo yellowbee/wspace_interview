@@ -41,4 +41,33 @@ public class TreeUtility {
 		}
 		System.out.println();
 	}
+	
+	public static TreeNode deserialize(int[] serialized) {
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
+		TreeNode root = new TreeNode(serialized[0]);
+		queue.add(root);
+		
+		int n = 1;
+		while (!queue.isEmpty()) {
+			TreeNode node = queue.remove();
+			if (serialized[n] != 0) {
+				node.left = new TreeNode(serialized[n]);
+				queue.add(node.left);
+			}
+			else {
+				node.left = null;
+			}
+			n++;
+			if (serialized[n] != 0) {
+				node.right = new TreeNode(serialized[n]);
+				queue.add(node.right);
+			}
+			else {
+				node.right = null;
+			}
+			n++;
+		}
+		
+		return root;
+	}
 }
