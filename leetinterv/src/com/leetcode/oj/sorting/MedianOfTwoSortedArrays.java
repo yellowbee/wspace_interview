@@ -1,14 +1,59 @@
 package com.leetcode.oj.sorting;
 
+/*
+ * Test cases:
+ * int[] A =  {1, 5, 7, 10, 13};
+ * int[] B = {11, 15, 23, 30, 31};
+ * 
+ * {4}, {1,2,3}
+ */
+
 public class MedianOfTwoSortedArrays {
 	public static void main(String[] args) {
-		int[] A =  {1, 5, 7, 10, 13};
-		int[] B = {11, 15, 23, 30};
+		int[] A =  {4};
+		int[] B = {1,3,10};
 		
 		System.out.println(MedianOfTwoSortedArrays.findMedianSortedArrays(A, B));
 	}
 	
 	public static double findMedianSortedArrays(int A[], int B[]) {
+		int m = A.length;
+		int n = B.length;
+		
+		if ((m+n) % 2 !=0) {
+			return (double)findKth(A, B, (m+n)/2, 0, m-1, 0, n-1);
+		}
+		else {
+			return (findKth(A, B, (m+n)/2, 0, m-1, 0, n-1) + findKth(A, B, (m+n)/2-1, 0, m-1, 0, n-1)) * 0.5;
+		}
+	}
+	
+	public static int findKth(int[] A, int[] B, int k, int aStart, int aEnd, int bStart, int bEnd) {
+		int aLen = aEnd - aStart + 1;
+		int bLen = bEnd - bStart + 1;
+		
+		// corner cases
+		if (aLen == 0) return B[bStart + k];
+		if (bLen == 0) return A[aStart + k];
+		if (k == 0) return A[aStart] < B[bStart] ? A[aStart] : B[bStart];
+		
+		int aMid = (aStart + aEnd) / 2;
+		int bMid = (bStart + bEnd) / 2;
+		
+		if (A[aMid] > B[bMid]) {
+			k = k - (bMid - bStart + 1);
+			aEnd = aMid;
+			bStart = bMid + 1;
+		}
+		else {
+			k = k - (aMid - aStart + 1);
+			bEnd = bMid;
+			aStart = aMid + 1;
+		}
+		
+		return findKth(A, B, k, aStart, aEnd, bStart, bEnd);
+	}
+	/*public static double findMedianSortedArrays(int A[], int B[]) {
         int mid;
         boolean odd;
         if ((A.length + B.length) % 2 == 0) { // even
@@ -66,5 +111,5 @@ public class MedianOfTwoSortedArrays {
         }
         
         return 0;
-    }
+    }*/
 }
