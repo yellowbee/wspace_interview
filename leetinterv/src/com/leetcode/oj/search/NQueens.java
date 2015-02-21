@@ -24,6 +24,7 @@ public class NQueens {
 		for (String[] str_arr: result) {
 			System.out.println(Arrays.toString(str_arr));
 		}
+		System.out.println(result.size());
 	}
 	
 	public List<String[]> solveNQueens(int n) {

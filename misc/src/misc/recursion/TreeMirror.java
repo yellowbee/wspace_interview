@@ -1,11 +1,8 @@
 package misc.recursion;
 
-import com.leetcode.oj.binarytree.BTBinaryTreeFromInNPreOrder;
-import com.leetcode.oj.common.TreeNode;
-import com.leetcode.oj.common.TreeUtility;
 
 public class TreeMirror {
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		int[] preorder = {1, 2, 4, 5, 3, 6};
 		int[] inorder = {4, 2, 5, 1, 3, 6};
 		TreeNode root = BTBinaryTreeFromInNPreOrder.buildTree(preorder, inorder);
@@ -30,5 +27,5 @@ public class TreeMirror {
 		root.right = leftMirror;
 		
 		return root;
-	}
+	}*/
 }

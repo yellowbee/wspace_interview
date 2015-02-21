@@ -3,11 +3,10 @@ package misc.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.leetcode.oj.binarytree.BTBinaryTreeFromInNPreOrder;
-import com.leetcode.oj.common.TreeNode;
+import com.common.tree.TreeNode;
 
 public class CommonAncestorInBinaryTree {
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		int[] pre = {1,2,4,5,3,6,7};
 		int[] in = {4,2,5,1,6,3,7};
 		
@@ -35,5 +34,5 @@ public class CommonAncestorInBinaryTree {
 	    else {
 	        return false;
 	    }
-	}
+	}*/
 }

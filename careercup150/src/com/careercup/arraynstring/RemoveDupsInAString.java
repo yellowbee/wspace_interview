@@ -6,11 +6,15 @@ import java.util.Arrays;
  * corner cases: empty string, string of size 1
  * 
  * Solution: Use three pointers; O(n^2)
+ * 
+ * Note: The difference from the coding problem of removing
+ * duplicates in leetcode is that the array here is not necessarily
+ * sorted.
  */
 
 public class RemoveDupsInAString {
 	public static void main(String[] args) {
-		String s = "abcdefg";
+		String s = "abcdabc";
 		char[] str = s.toCharArray();
 		
 		RemoveDupsInAString.removeDuplicates(str);

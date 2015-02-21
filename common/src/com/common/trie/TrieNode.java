@@ -30,6 +30,7 @@ public class TrieNode extends BasicTrieNode {
 		}
 	}
 	
+	// add word to tn starting from tn's children
 	public static void addWord(TrieNode tn, String word) {
 		if (word.equals("")) {
 			tn.words++;
@@ -44,6 +45,7 @@ public class TrieNode extends BasicTrieNode {
 		}
 	}
 	
+	// count the input word starting from tn's children
 	public static int countWords(TrieNode tn, String word) {
 		if (word.equals("")) {
 			return tn.words;

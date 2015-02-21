@@ -1,7 +1,5 @@
 package misc.recursion;
 
-import com.leetcode.oj.common.ListNode;
-import com.leetcode.oj.common.ListUtilities;
 
 /*
  * Reverse a linked list.
@@ -10,7 +8,7 @@ import com.leetcode.oj.common.ListUtilities;
  */
 
 public class ReverseALinkedList {
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		int[] A = {2, 3, 5, 8, 9, 10};
 		ListNode head = ListUtilities.arrayToList(A);
 		ListNode newHead = ReverseALinkedList.reverse(head);
@@ -33,5 +31,5 @@ public class ReverseALinkedList {
 		head.next = null;
 		
 		return newHead;
-	}
+	}*/
 }
